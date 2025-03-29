@@ -269,7 +269,7 @@ function App() {
                     ref={inputRef}
                     value={tweetText}
                     onChange={handleTweetChange}
-                    placeholder="글을 입력하면 시간이 흐르고 단어수를 자동으로 세어줍니다.&#13;&#10;200단어 이상의 영어 일기를 매일매일 써보세요.&#13;&#10;어느정도 쌓이면 글쓰는 시간이 빨라졌다는 것을 느끼게 될 거예요.&#13;&#10;다 쓴 후에는 '복사'버튼을 눌러 자신의 블로그나 카페에 올려서 매일매일 기록해 보세요."
+                    placeholder="글을 입력하면 시간이 흐르고 단어수를 자동으로 세어줍니다.&#13;&#10;200단어 이상의 영어 일기를 매일매일 써보세요.&#13;&#10;하루하루 쌓이면 글쓰는 시간이 빨라졌다는 것을 느끼게 될 거예요.&#13;&#10;다 쓴 후에는 '복사'버튼을 눌러 자신의 블로그나 카페에 올려서 매일매일 기록해 보세요.&#13;&#10;'글쓰기 완료'버튼을 누르면 시간이 멈추고 글 쓰는데 사용한 시간을 확인할 수 있습니다."
                     maxLength="3000" // Twitter's character limit
                 />
 
@@ -313,6 +313,12 @@ function App() {
                 ) : ("") }
             </div>
             */}
+
+            <br /><br /><br />
+
+            <div className="contact-info">
+                lee.seokhyun@gmail.com | <a href="https://linkedin.com/in/lee-seokhyun" target="_blank">linkedin.com/in/lee-seokhyun</a>
+            </div>
         </div>
     );
 }

@@ -82,6 +82,13 @@ button:hover {
   background-color: #1991c6;
 }
 
+.contact-info {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  color: #737c81;
+}
+
 .tweet-feed {
   margin: 0 auto;
   margin-top: 20px;
