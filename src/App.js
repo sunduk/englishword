@@ -223,7 +223,7 @@ function App() {
 
     return (
         <div className="app">
-            <h1>영어 단어수 세기123</h1>
+            <h1>영어 단어수 세기</h1>
 
             {/* <button className="new-post-button" onClick={handleAddNewJournal}>{isInputHidden ? "Add new journal" : "Close"}</button> */}
 
