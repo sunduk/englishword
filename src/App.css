@@ -1,3 +1,10 @@
+/* ========================== */
+/* debug : npm start */
+/* build : npm run build */
+/* (push to github) */
+/* distribute : npm run deploy */
+/* ========================== */
+
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
