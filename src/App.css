@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -12,17 +12,19 @@ h1 {
 }
 
 .tweet-input {
-  margin: 0 auto; /* 가로 중앙 정렬 */
+  margin: 0 auto;
+  max-width: 100%;
   width: 900px;
 }
 
 .new-post-button {
-  display: block;  /* 버튼을 블록 요소로 변경 */
-  margin: 0 auto;  /* 가로 중앙 정렬 */
+  display: block;
+  margin: 0 auto;
 }
 
 .delete-button {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   padding: 10px 20px;
   background-color: #f21d1d;
   color: white;
@@ -33,8 +35,8 @@ h1 {
 }
 
 button.delete-button:hover {
-  background-color: #df0f0f;  /* hover 상태에서의 배경색 */
-  transform: scale(1.05);  /* hover 상태에서 버튼 크기 살짝 키우기 */
+  background-color: #df0f0f;
+  transform: scale(1.05);
 }
 
 .button-disabled {
@@ -47,19 +49,18 @@ button.button-disabled:hover {
 }
 
 textarea {
-  margin: 0 auto; /* 가로 중앙 정렬 */
-  width: 900px;
-  height: 450px; /* Increased height */
+  margin: 15px auto 10px auto;
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
   border: 1px solid #ddd;
-  padding: 15px; /* Increased padding for more space */
-  border-radius: 10px; /* Softer rounded corners */
+  padding: 15px;
+  border-radius: 10px;
   resize: none;
-  font-size: 18px; /* Larger text size for better readability */
+  font-size: 18px;
   font-family: 'Roboto', sans-serif;
-  line-height: 1.5; /* More line spacing for better legibility */
+  line-height: 1.5;
   box-sizing: border-box;
-  margin-bottom: 10px;
-  margin-top: 15px;
 }
 
 textarea::placeholder {
@@ -89,22 +90,11 @@ button:hover {
   color: #737c81;
 }
 
-.tweet-feed {
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 900px;
-}
-
-.tweet-feed-center {
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 20px;
-  width: 900px;
-}
-
+.tweet-feed,
+.tweet-feed-center,
 .tweet-feed-left {
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
+  max-width: 100%;
   width: 900px;
 }
 
@@ -115,10 +105,11 @@ button:hover {
   padding: 15px;
   margin-bottom: 15px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  line-height: 1.6; /* More line spacing for better legibility */
+  line-height: 1.6;
 }
 
-textarea:focus, button:focus {
+textarea:focus,
+button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.3);
 }
@@ -159,154 +150,173 @@ textarea:focus, button:focus {
 }
 
 .user-profile {
-    margin: 0 auto; /* 가로 중앙 정렬 */
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  flex-wrap: wrap;
 }
 
 .profile-picture {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .logout-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 14px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
 }
 
 .logout-button:hover {
-    background-color: #c82333;
+  background-color: #c82333;
 }
 
-.login-section {
-  margin: 0 auto; /* 가로 중앙 정렬 */
+.login-section,
+.user-section {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.user-section {
-    margin: 0 auto; /* 가로 중앙 정렬 */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
 .weather-info {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 10px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 .weather-info h3 {
-    margin: 0 0 10px 0;
-    color: #1da1f2;
-    font-size: 18px;
+  margin: 0 0 10px 0;
+  color: #1da1f2;
+  font-size: 18px;
 }
 
 .weather-details {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .weather-details p {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
 }
 
-.stopwatch {
-    margin: 0 auto; /* 가로 중앙 정렬 */
-    margin-bottom: 5px;
-    font-size: 17px;
-    font-style: italic;
-    color: #635b61;
-    font-weight: 500;
-}
-
-.word-count {
-  margin: 0 auto; /* 가로 중앙 정렬 */
-  margin-bottom: 5px;
+.stopwatch,
+.word-count,
+.blinking {
+  margin: 0 auto 5px auto;
   font-size: 17px;
   font-style: italic;
   color: #635b61;
   font-weight: 500;
 }
 
-.tweet-duration {
-    font-size: 12px;
-    color: #657786;
-    margin-top: 5px;
-    font-style: italic;
-}
-
-.tweet-word-count {
+.tweet-duration,
+.tweet-word-count,
+.tweet-info {
   font-size: 12px;
   color: #657786;
   margin-top: 5px;
   font-style: italic;
 }
 
-.tweet-info {
-  font-size: 17px;
-  color: #657786;
-  margin-top: 5px;
-  font-style: italic;
-
-}
-
-/* Add a blinking animation */
 @keyframes blink {
   0% {
     background-color: white;
   }
   50% {
-    background-color: #aab7db; /* Light gray background during blink */
+    background-color: #aab7db;
   }
   100% {
     background-color: white;
   }
 }
 
-/* Class to trigger blinking */
 .blinking {
-  animation: blink 0.5s linear 0s 3; /* 3 times, 0.5s each time */
-  margin: 0 auto; /* 가로 중앙 정렬 */
-  margin-bottom: 5px;
-  font-size: 17px;
-  font-style: italic;
-  color: #635b61;
-  font-weight: 500;
+  animation: blink 0.5s linear 0s 3;
 }
-
-
 
 .button-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-   align-items: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .left-buttons {
   display: flex;
-  gap: 8px; /* 버튼 간 간격 */
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.right-button {
-  margin-left: auto; /* 오른쪽 정렬 */
+
+
+/* ========================== */
+/*        Mobile Styles       */
+/* ========================== */
+@media (max-width: 900px) {
+  .App {
+    padding: 15px;
+  }
+
+  /* ✅ Mobile styles */
+  @media (max-width: 900px) {
+    textarea {
+      display: block;            /* ✅ Makes it a block element */
+      margin: 15px auto 10px auto; /* ✅ Centers horizontally */
+      width: 90%;               /* ✅ Responsive width */
+
+      max-width: 90%;
+      height: 450px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      resize: none;
+      font-size: 18px;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.5;
+      box-sizing: border-box;
+    }
+
+    textarea::placeholder {
+      font-size: 15px;
+      font-style: italic;
+    }
+  }
+
+
+  .stopwatch,
+  .word-count,
+  .blinking {
+    font-size: 15px;
+    width: 90%;               /* ✅ Responsive width */
+  }
+
+  .contact-info {
+    font-size: 16px;
+  }
+
+  .button-container {
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    display: flex;            /* ✅ Makes it a block element */
+    margin: 15px auto 10px auto; /* ✅ Centers horizontally */
+    width: 90%;               /* ✅ Responsive width */
+  }
 }
